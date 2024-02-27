@@ -43,11 +43,12 @@ import TaskForm from './components/TaskForm.vue';
 import {useTaskStore} from './stores/TaskStore'
 import {storeToRefs} from 'pinia'
 import { ref } from 'vue';
+import { toRef } from 'vue';
 
 const TaskStore = useTaskStore()
 
 const filter = ref('all')
 
 const {tasks} = storeToRefs(TaskStore)
-const favTasks = TaskStore.favTasks
+const favTasks = toRef(TaskStore, 'favTasks');
 </script>

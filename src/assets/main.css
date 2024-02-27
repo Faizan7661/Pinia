@@ -107,3 +107,7 @@ form input {
   color: #555;
   font-size: 1em;
 }
+
+.task i.active{
+  color: #ff005d;
+} 
